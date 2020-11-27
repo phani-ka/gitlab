@@ -15,7 +15,7 @@ spec:
       volumes:
       - name: nexus3-volume
         hostPath:
-	  path: /mnt/nfs/nexus3
+          path: /mnt/nfs/nexus3
       containers:
       - name: nexus3
         image: sonatype/nexus3:latest
