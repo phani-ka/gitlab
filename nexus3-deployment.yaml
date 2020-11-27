@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nexus3-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nexus3
+  template:
+    metadata:
+      labels:
+        app: nexus3
+    spec:
+	  volumes:
+      - name: nexus3-volume
+	    hostPath:
+	      path: /mnt/nfs/nexus3
+      containers:
+      - name: nexus3
+        image: sonatype/nexus3:latest
+        ports:
+          - name: http-port
+            containerPort: 8081
+        volumeMounts:
+          - name: nexus3-volume
+            mountPath: /opt/sonatype
