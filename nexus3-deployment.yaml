@@ -14,7 +14,7 @@ spec:
     spec:
       volumes:
       - name: nexus3-volume
-	hostPath:
+        hostPath:
 	   path: /mnt/nfs/nexus3
       containers:
       - name: nexus3
