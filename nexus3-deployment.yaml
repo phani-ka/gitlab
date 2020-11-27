@@ -12,10 +12,10 @@ spec:
       labels:
         app: nexus3
     spec:
-	  volumes:
+      volumes:
       - name: nexus3-volume
-	    hostPath:
-	      path: /mnt/nfs/nexus3
+	hostPath:
+	   path: /mnt/nfs/nexus3
       containers:
       - name: nexus3
         image: sonatype/nexus3:latest
