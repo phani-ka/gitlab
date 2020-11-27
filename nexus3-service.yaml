@@ -8,7 +8,7 @@ spec:
     app: nexus3
   ports:
   - name: nexus3-port
-    port: 8080
-    targetPort: 8080
+    port: 8081
+    targetPort: 8081
     protocol: TCP
   
