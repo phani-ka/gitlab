@@ -12,16 +12,16 @@ spec:
       labels:
         app: nexus3
     spec:
-      volumes:
-      - name: nexus3-volume
-        hostPath:
-          path: /mnt/nfs/nexus3
+   #   volumes:
+   #   - name: nexus3-volume
+   #     hostPath:
+    #      path: /mnt/nfs/nexus3
       containers:
       - name: nexus3
         image: sonatype/nexus3:latest
         ports:
           - name: http-port
             containerPort: 8081
-        volumeMounts:
-          - name: nexus3-volume
-            mountPath: /opt/sonatype
+     #   volumeMounts:
+     #     - name: nexus3-volume
+     #       mountPath: /opt/sonatype
